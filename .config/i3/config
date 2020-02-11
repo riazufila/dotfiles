@@ -164,7 +164,7 @@ bar {
 
 # Autostart
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-fill /home/$(id -un)/MEGA/save-pic/hands_headphones_music_136123_2560x1600.jpg
+exec --no-startup-id feh --bg-fill /home/$(id -un)/.background.jpg
 exec --no-startup-id xset s off dpms 0 0 0 -dpms
 exec --no-startup-id nm-applet
 exec --no-startup-id megasync

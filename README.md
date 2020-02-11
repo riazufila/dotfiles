@@ -1,5 +1,6 @@
 # dotfiles
 
+NOTE: These dotfiles are solely for personal use and are in no way configured to match every person in the community.
 WARNING: Some of the dotfiles may not be dynamic, therefore, it is a good idea to review the dotfiles before using! 
 
 The root directory of this repository acts as the home directory of your Linux distribution.

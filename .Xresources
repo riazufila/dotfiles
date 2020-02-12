@@ -48,6 +48,9 @@ URxvt*boldItalicfont: xft:Inconsolata:bold:italic:size=11
 ! Place scroll bar at the right
 URxvt*scrollBar_right: true
 
+! Set scroll bar style
+URxvt*scrollstyle: plain
+
 ! Disable default terminal contents printing when pressing PrintScreen
 ! Use gnome-screenshot to printscreen by editing i3 dotfile
 URxvt.print-pipe: "cat > /dev/null"

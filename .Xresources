@@ -1,6 +1,6 @@
 ! special
 *.foreground:   #a5a2a2
-*.background:   #0a1416
+*.background:   #090300
 *.cursorColor:  #a5a2a2
 
 ! black
@@ -36,6 +36,8 @@
 *.color15:      #f7f7f7
 
 URxvt.scrollBar_right: true
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0000/c800
 URxvt.font: xft:Inconsolata:size=11
 URxvt.boldFont: xft:Inconsolata:bold:size=11
 URxvt.italicFont: xft:Inconsolata:italic:size=11

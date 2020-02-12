@@ -23,6 +23,9 @@ bindsym $mod+Shift+g gaps inner current set 0; gaps outer current set 0
 font pango:Inconsolata 10
 default_border pixel 3
 
+# Use gnome-screenshot to capture screens.
+bindsym $mod+Print exec --no-startup-id gnome-screenshot --interactive
+
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%

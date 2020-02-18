@@ -184,7 +184,7 @@ bar {
 }
 
 # Autostart
-exec --no-startup-id udiskie
+exec --no-startup-id udiskie -sAN
 exec --no-startup-id picom
 exec --no-startup-id feh --bg-fill /home/$(id -un)/.background.jpg
 exec --no-startup-id xset s off dpms 0 0 0 -dpms

@@ -94,6 +94,7 @@ bindsym $mod+e layout toggle split
 
 # Centered floating window
 for_window [floating] move position center
+for_window [class="MEGAsync" instance="megasync"] move position mouse
 
 # Force window to float
 for_window [class="Gnome-screenshot" instance="gnome-screenshot"] floating enable

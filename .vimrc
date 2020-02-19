@@ -24,8 +24,10 @@ set cursorline
 set cursorlineopt=both
 set autoindent
 set tabstop=4
-set expandtab
+set softtabstop=0
 set shiftwidth=4
+set smarttab
+set expandtab
 
 syntax on
 filetype plugin indent on

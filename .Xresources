@@ -1,5 +1,5 @@
 ! special
-! [number] before hex color code is the opacity level
+! [number] before hex color code is the opacity level (Must be paired with URxvt.depth: 32)
 URxvt.foreground:   [100]#a5a2a2
 URxvt.background:   [75]#090300
 URxvt.cursorColor:  #a5a2a2

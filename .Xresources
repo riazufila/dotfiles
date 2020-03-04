@@ -1,43 +1,44 @@
 ! special
-! [number] before hex color code is the opacity level (Must be paired with URxvt.depth: 32)
-URxvt.foreground:   [100]#a5a2a2
-URxvt.background:   [75]#090300
-URxvt.cursorColor:  #a5a2a2
+! [number] before hex color code is the opacity level (Must be
+! paired with URxvt.depth: 32)
+URxvt.foreground:   #fdfdfd
+URxvt.background:   #000000
+URxvt.cursorColor:  #fdfdfd
 
 ! black
-URxvt.color0:       #090300
-URxvt.color8:       #5c5855
+URxvt.color0:       #282a36
+URxvt.color8:       #414458
 
 ! red
-URxvt.color1:       #db2d20
-URxvt.color9:       #db2d20
+URxvt.color1:       #5adecd
+URxvt.color9:       #18e3c8
 
 ! green
-URxvt.color2:       #01a252
-URxvt.color10:      #01a252
+URxvt.color2:       #f37f97
+URxvt.color10:      #ff4971
 
 ! yellow
-URxvt.color3:       #fded02
-URxvt.color11:      #fded02
+URxvt.color3:       #f2a272
+URxvt.color11:      #ff8037
 
 ! blue
-URxvt.color4:       #01a0e4
-URxvt.color12:      #01a0e4
+URxvt.color4:       #8897f4
+URxvt.color12:      #556fff
 
 ! magenta
-URxvt.color5:       #a16a94
-URxvt.color13:      #a16a94
+URxvt.color5:       #c574dd
+URxvt.color13:      #b043d1
 
 ! cyan
-URxvt.color6:       #b5e4f4
-URxvt.color14:      #b5e4f4
+URxvt.color6:       #79e6f3
+URxvt.color14:      #3fdcee
 
 ! white
-URxvt.color7:       #a5a2a2
-URxvt.color15:      #f7f7f7
+URxvt.color7:       #fdfdfd
+URxvt.color15:      #bebec1
 
 ! Force a visual with alpha channel to create transparency
-URxvt.depth: 32
+!URxvt.depth: 32
 
 ! DPI
 URxvt.dpi: 96
@@ -70,4 +71,4 @@ URxvt.scrollBar: false
 URxvt.print-pipe: "cat > /dev/null"
 
 ! Set internal border (border)
-URxvt.internalBorder: 10
+URxvt.internalBorder: 15

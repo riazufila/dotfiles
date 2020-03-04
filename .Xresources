@@ -1,78 +1,41 @@
 ! special
 ! [number] before hex color code is the opacity level (Must be
 ! paired with URxvt.depth: 32)
-!URxvt.foreground:   [100]#ffffff
-!URxvt.background:   [75]#090300
-!URxvt.cursorColor:  #a5a2a2
+URxvt.foreground:   [100]#ffffff
+URxvt.background:   [75]#000000
+URxvt.cursorColor:  #ffffff
 
 ! black
-!URxvt.color0:       #090300
-!URxvt.color8:       #5c5855
+URxvt.color0:       #101010
+URxvt.color8:       #404040
 
 ! red
-!URxvt.color1:       #db2d20
-!URxvt.color9:       #db2d20
+URxvt.color1:       #e84f4f
+URxvt.color9:       #d23d3d
 
 ! green
-!URxvt.color2:       #01a252
-!URxvt.color10:      #01a252
+URxvt.color2:       #b8d68c
+URxvt.color10:      #a0cf5d
 
 ! yellow
-!URxvt.color3:       #fded02
-!URxvt.color11:      #fded02
+URxvt.color3:       #e1aa5d
+URxvt.color11:      #f39d21
 
 ! blue
-!URxvt.color4:       #01a0e4
-!URxvt.color12:      #01a0e4
+URxvt.color4:       #7dc1cf
+URxvt.color12:      #4e9fb1
 
 ! magenta
-!URxvt.color5:       #a16a94
-!URxvt.color13:      #a16a94
+URxvt.color5:       #9b64fb
+URxvt.color13:      #8542ff
 
 ! cyan
-!URxvt.color6:       #b5e4f4
-!URxvt.color14:      #b5e4f4
+URxvt.color6:       #6d878d
+URxvt.color14:      #42717b
 
 ! white
-!URxvt.color7:       #a5a2a2
-!URxvt.color15:      #f7f7f7
-
-! special
-*.foreground:   [100]#ffffff
-*.background:   [75]#000000
-*.cursorColor:  #ffffff
-
-! black
-*.color0:       #101010
-*.color8:       #404040
-
-! red
-*.color1:       #e84f4f
-*.color9:       #d23d3d
-
-! green
-*.color2:       #b8d68c
-*.color10:      #a0cf5d
-
-! yellow
-*.color3:       #e1aa5d
-*.color11:      #f39d21
-
-! blue
-*.color4:       #7dc1cf
-*.color12:      #4e9fb1
-
-! magenta
-*.color5:       #9b64fb
-*.color13:      #8542ff
-
-! cyan
-*.color6:       #6d878d
-*.color14:      #42717b
-
-! white
-*.color7:       #dddddd
-*.color15:      #dddddd
+URxvt.color7:       #dddddd
+URxvt.color15:      #dddddd
 
 ! Force a visual with alpha channel to create transparency
 URxvt.depth: 32

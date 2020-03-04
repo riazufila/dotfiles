@@ -68,3 +68,6 @@ URxvt.scrollBar: false
 ! Disable default terminal contents printing when pressing PrintScreen
 ! Use gnome-screenshot to printscreen by editing i3 dotfile
 URxvt.print-pipe: "cat > /dev/null"
+
+! Set internal border (border)
+URxvt.internalBorder: 10

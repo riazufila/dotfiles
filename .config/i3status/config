@@ -7,7 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
+        colors = false
+        markup = pango
         interval = 1
 }
 
@@ -20,31 +21,32 @@ order += "battery all"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: Up"
-        format_down = "W: Down"
+        format_up = "<span background='#ffffff' color='#000000'> W: Up </span>"
+        format_down = "<span background='#ffffff' color='#000000'> W: Down </span>"
 }
 
 ethernet _first_ {
-        format_up = "E: Up"
-        format_down = "E: Down"
+        format_up = "<span background='#ffffff' color='#000000'> E: Up </span>"
+        format_down = "<span background='#ffffff' color='#000000'> E: Down </span>"
 }
 
 cpu_usage {
-        format = "CPU 1: %cpu0, CPU 2: %cpu1, CPU 3: %cpu2, CPU 4: %cpu3"
+        format = "<span background='#e84f4f'> CPU 1: %cpu0 </span> <span background='#b8d68c'> CPU 2: %cpu1 </span> <span background='#e1aa5d'> CPU 3: %cpu2 </span> <span background='#7dc1cf'> CPU 4: %cpu3 </span>"
 }
 
 memory {
-        format = "%used/%total"
+        format = "<span background='#9b64fb'> %used / %total </span>"
 }
 
 disk "/" {
-        format = "%avail"
+        format = "<span background='#6d878d'> %avail </span>"
 }
 
 battery all {
-        format = "%percentage"
+        format = "<span background='#dddddd'> %percentage </span>"
 }
 
 tztime local {
-        format = "%a %d-%m-%Y %H:%M:%S"
+        format = "<span background='#ffffff'> %time </span>"
+        format_time = "%a %d-%m-%Y %H:%M:%S"
 }

@@ -193,10 +193,31 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    colors {
+        background #000000
+        statusline #ffffff
+        separator #666666
+
+        focused_workspace  #4c7899 #285577 #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode       #2f343a #900000 #ffffff
+    }
+
 	tray_output primary
 	status_command i3status
 	position top
 }
+
+# Color configurations
+client.focused          #000000 #000000 #ffffff #9b9b9b #f5f5f5
+client.focused_inactive #333333 #333333 #ffffff #333333 #333333
+client.unfocused        #333333 #333333 #ffffff #333333 #333333
+client.urgent           #333333 #333333 #ffffff #900000 #900000
+client.placeholder      #333333 #333333 #ffffff #333333 #333333
+
+client.background       #333333
 
 # Autostart
 exec --no-startup-id udiskie -sAN

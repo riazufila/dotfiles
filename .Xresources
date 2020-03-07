@@ -63,8 +63,14 @@ URxvt.boldFont: xft:Inconsolata:bold:size=11
 URxvt.italicFont: xft:Inconsolata:italic:size=11
 URxvt.boldItalicfont: xft:Inconsolata:bold:italic:size=11
 
+! Enable or disable scroll bar
+URxvt.scrollBar: true
+
 ! Place scroll bar at the right
-URxvt.scrollBar: false
+URxvt.scrollBar_right: true
+
+! Scroll bar style
+URxvt.scrollstyle: plain
 
 ! Disable default terminal contents printing when pressing PrintScreen
 ! Use gnome-screenshot to printscreen by editing i3 dotfile

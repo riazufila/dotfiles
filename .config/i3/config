@@ -205,7 +205,7 @@ bar {
 
 # Autostart
 exec --no-startup-id udiskie -sAN
-exec --no-startup-id picom --experimental-backends --blur-method dual_kawase --blur-strength 10
+exec --no-startup-id picom
 exec --no-startup-id feh --bg-fill /home/$(id -un)/.background.jpg
 exec --no-startup-id xset s off dpms 0 0 0 -dpms
 exec --no-startup-id nm-applet

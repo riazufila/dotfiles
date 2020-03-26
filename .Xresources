@@ -58,10 +58,10 @@ Xft.autohint: 0
 Xft.hintstyle: hintfull
 
 ! Font declaration
-URxvt.font: xft:Inconsolata:pixelsize=16
-URxvt.boldFont: xft:Inconsolata:bold:size=16
-URxvt.italicFont: xft:Inconsolata:italic:size=16
-URxvt.boldItalicfont: xft:Inconsolata:bold:italic:size=16
+URxvt.font: xft:Hack:pixelsize=12:style=Regular
+URxvt.boldFont: xft:Hack:pixelsize=12:style=Bold
+URxvt.italicFont: xft:Hack:pixelsize=12:style=Italic
+URxvt.boldItalicfont: xft:Hack:size=12:style=Bold Italic
 
 ! Enable or disable scroll bar
 URxvt.scrollBar: true

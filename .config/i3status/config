@@ -31,11 +31,11 @@ ethernet _first_ {
 }
 
 cpu_usage {
-        format = "<span background='#e84f4f'> CPU 1: %cpu0 </span> <span background='#b8d68c'> CPU 2: %cpu1 </span> <span background='#e1aa5d'> CPU 3: %cpu2 </span> <span background='#7dc1cf'> CPU 4: %cpu3 </span>"
+        format = "<span background='#e84f4f'> CPU 1: %cpu0 </span> <span background='#b7ce42'> CPU 2: %cpu1 </span> <span background='#fea63c'> CPU 3: %cpu2 </span> <span background='#66aabb'> CPU 4: %cpu3 </span>"
 }
 
 memory {
-        format = "<span background='#9b64fb'> %used / %total </span>"
+        format = "<span background='#b7416e'> %used / %total </span>"
 }
 
 disk "/" {

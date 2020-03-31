@@ -1,33 +1,33 @@
 ! special
 ! [number] before hex color code is the opacity level (Must be
 ! paired with URxvt.depth: 32)
-URxvt.foreground:   [100]#ffffff
-URxvt.background:   [85]#000000
+URxvt.foreground:   #ffffff
+URxvt.background:   #161616
 URxvt.cursorColor:  #ffffff
 
 ! black
-URxvt.color0:       #101010
-URxvt.color8:       #404040
+URxvt.color0:       #222222
+URxvt.color8:       #666666
 
 ! red
 URxvt.color1:       #e84f4f
 URxvt.color9:       #d23d3d
 
 ! green
-URxvt.color2:       #b8d68c
-URxvt.color10:      #a0cf5d
+URxvt.color2:       #b7ce42
+URxvt.color10:      #bde077
 
 ! yellow
-URxvt.color3:       #e1aa5d
-URxvt.color11:      #f39d21
+URxvt.color3:       #fea63c
+URxvt.color11:      #ffe863
 
 ! blue
-URxvt.color4:       #7dc1cf
-URxvt.color12:      #4e9fb1
+URxvt.color4:       #66aabb
+URxvt.color12:      #aaccbb
 
 ! magenta
-URxvt.color5:       #9b64fb
-URxvt.color13:      #8542ff
+URxvt.color5:       #b7416e
+URxvt.color13:      #e16a98
 
 ! cyan
 URxvt.color6:       #6d878d
@@ -35,7 +35,7 @@ URxvt.color14:      #42717b
 
 ! white
 URxvt.color7:       #dddddd
-URxvt.color15:      #dddddd
+URxvt.color15:      #cccccc
 
 ! Force a visual with alpha channel to create transparency
 URxvt.depth: 32

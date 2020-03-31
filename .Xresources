@@ -2,7 +2,7 @@
 ! [number] before hex color code is the opacity level (Must be
 ! paired with URxvt.depth: 32)
 URxvt.foreground:   [100]#ffffff
-URxvt.background:   [75]#000000
+URxvt.background:   [85]#000000
 URxvt.cursorColor:  #ffffff
 
 ! black

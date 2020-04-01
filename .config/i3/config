@@ -194,8 +194,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     colors {
-        background #000000
-        statusline #000000
+        background #161616
+        statusline #161616
         separator #ffffff
     }
 	tray_output primary

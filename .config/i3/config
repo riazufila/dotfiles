@@ -44,6 +44,10 @@ bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+# Toggle for keyboard backlight
+bindsym $mod+t exec --no-startup-id xset led on
+bindsym $mod+Shift+t exec --no-startup-id xset led off
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -210,6 +214,8 @@ exec --no-startup-id udiskie -sAN
 exec --no-startup-id picom --experimental-backends --blur-method dual_kawase
 exec --no-startup-id feh --bg-fill /home/$(id -un)/.background.jpg
 exec --no-startup-id xset s off dpms 0 0 0 -dpms
+exec --no-startup-id xautolock -time 15 -locker "/home/$(id -un)/Scripts/i3lock-dpms.sh"
 exec --no-startup-id nm-applet
 exec --no-startup-id megasync
 exec --no-startup-id blueman-applet
+exec --no-startup-id xset led on

@@ -97,6 +97,7 @@ bindsym $mod+e layout toggle split
 # Force window to float
 for_window [class="Gnome-screenshot" instance="gnome-screenshot"] floating enable
 for_window [class="MEGAsync" instance="megasync"] floating enable
+for_window [class="Git-gui--askpass" instance="git-gui--askpass"] floating enable
 
 # Centered floating window with some exceptions
 for_window [floating] move position center

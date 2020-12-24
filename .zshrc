@@ -73,7 +73,7 @@ zle -N down-line-or-beginning-search
 
 # Aliases
 alias feh="feh --scale-down --auto-zoom"
-alias i3lock="pkill xautolock; ~/Scripts/i3lock-dpms.sh; xautolock -time 15 -locker '/home/$(id -un)/Scripts/i3lock-dpms.sh' -corners 0-00 &"
+alias i3lock="pkill xautolock; ~/Repositories/Scripts/i3lock-dpms.sh; xautolock -time 15 -locker '~/Repositories/Scripts/i3lock-dpms.sh' -corners 0-00 &"
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'

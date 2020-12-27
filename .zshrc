@@ -78,8 +78,8 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
-alias update-vim-plugin='/home/riazufila/Repositories/Scripts/update-vim-plugins.sh'
-alias intelligent-ssh-agent='/home/riazufila/Repositories/Scripts/intelligent-ssh-agent.sh'
+alias uvp='/home/riazufila/Repositories/Scripts/update-vim-plugins.sh'
+alias isa='/home/riazufila/Repositories/Scripts/intelligent-ssh-agent.sh'
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

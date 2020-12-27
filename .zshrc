@@ -79,11 +79,18 @@ alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
 alias uvp='/home/riazufila/Repositories/Scripts/update-vim-plugins.sh'
-alias isa='/home/riazufila/Repositories/Scripts/intelligent-ssh-agent.sh'
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# Autostart ssh-agent
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 15m > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

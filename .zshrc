@@ -73,12 +73,10 @@ zle -N down-line-or-beginning-search
 
 # Aliases
 alias feh="feh --scale-down --auto-zoom"
-alias i3lock="pkill xautolock; /home/riazufila/Repositories/Scripts/i3lock-dpms.sh; xautolock -time 15 -locker '/home/riazufila/Repositories/Scripts/i3lock-dpms.sh' -corners 0-00 &"
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
-alias uvp='/home/riazufila/Repositories/Scripts/update-vim-plugins.sh'
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

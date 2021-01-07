@@ -84,10 +84,10 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Autostart ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent -t 15m > "$XDG_RUNTIME_DIR/ssh-agent.env"
+    ssh-agent -t 15m > "/tmp/ssh-agent.env"
 fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+    source "/tmp/ssh-agent.env" > /dev/null
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

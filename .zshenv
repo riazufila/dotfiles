@@ -1,4 +1,5 @@
-export EDITOR=vim
+export EDITOR=/usr/bin/vim
+export PAGER=/usr/bin/less
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold

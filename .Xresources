@@ -41,7 +41,7 @@ URxvt.color15:      #cccccc
 URxvt.depth: 32
 
 ! DPI
-URxvt.dpi: 96
+Xft.dpi: 96
 
 ! Type of subpixel antialiasing (none, rgb, bgr, vrgb or vbgr)
 Xft.rgba: rgb
@@ -55,7 +55,7 @@ Xft.hinting: 1
 Xft.autohint: 0
 
 ! Degree of hinting to use (hintnone, hintslight, hintmedium, or hintfull)
-Xft.hintstyle: hintfull
+Xft.hintstyle: hintslight
 
 ! Font declaration
 URxvt.font: xft:Hack:pixelsize=12:style=Regular

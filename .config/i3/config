@@ -46,7 +46,7 @@ bindsym $mod+Shift+t exec --no-startup-id xset led off
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec /usr/bin/urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill

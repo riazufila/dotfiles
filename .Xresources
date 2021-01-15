@@ -94,4 +94,7 @@ URxvt.perl-ext-common: resize-font,default,matcher
 ! Helper to URL clicker
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
-URxvt.matcher.rend.0: Uline Bold fg5
+
+! Disable default keybinds to enable usage of Ctrl+Shift
+URxvt.iso14755: false
+URxvt.iso14755_52: false

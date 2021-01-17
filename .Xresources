@@ -64,7 +64,7 @@ URxvt.italicFont: xft:Hack:pixelsize=12:style=Italic
 URxvt.boldItalicFont: xft:Hack:pixelsize=12:style=Bold Italic
 
 ! Enable or disable scroll bar
-URxvt.scrollBar: true
+URxvt.scrollBar: false
 
 ! Place scroll bar at the right
 URxvt.scrollBar_right: true
@@ -73,13 +73,13 @@ URxvt.scrollBar_right: true
 URxvt.scrollstyle: plain
 
 ! do not scroll with output
-URxvt*scrollTtyOutput: false
+!URxvt*scrollTtyOutput: false
 
 ! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-URxvt*scrollWithBuffer: true
+!URxvt*scrollWithBuffer: true
 
 ! scroll back to the bottom on keypress
-URxvt*scrollTtyKeypress: true
+!URxvt*scrollTtyKeypress: true
 
 ! Disable default terminal contents printing when pressing PrintScreen
 ! Use gnome-screenshot to printscreen by editing i3 dotfile

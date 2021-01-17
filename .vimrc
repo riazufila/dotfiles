@@ -204,3 +204,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " vim-airline
 let g:airline_powerline_fonts = 1
+
+" Supertb top to bottom
+let g:SuperTabDefaultCompletionType = "<c-n>"

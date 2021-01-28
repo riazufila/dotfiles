@@ -176,6 +176,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Extra CoC config jsonc file format syntax
 autocmd FileType json syntax match Comment +\/\/.\+$+
+" Extra coc-css config for scss file
+autocmd FileType scss setl iskeyword+=@-@
 
 " Coc snippets
 " Use <C-l> for trigger snippet expand.

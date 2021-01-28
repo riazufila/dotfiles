@@ -195,7 +195,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command exec /home/riazufila/Repositories/Scripts/net-speed.sh
+	status_command exec /home/riazufila/Repositories/scripts/net-speed.sh
 	tray_output primary
 	position top
 
@@ -211,7 +211,7 @@ exec --no-startup-id udiskie -sAN
 exec --no-startup-id picom --experimental-backends --blur-method dual_kawase
 exec --no-startup-id feh --bg-fill /home/$(id -un)/.background.jpg
 exec --no-startup-id xset s off dpms 0 0 0 -dpms led on
-exec --no-startup-id xautolock -time 15 -locker "~/Repositories/Scripts/i3lock-without-timeout.sh" -corners 0-00
+exec --no-startup-id xautolock -time 15 -locker "~/Repositories/scripts/i3lock-without-timeout.sh" -corners 0-00
 exec --no-startup-id gufw_icon.sh > /dev/null
 exec --no-startup-id nm-applet
 exec --no-startup-id megasync

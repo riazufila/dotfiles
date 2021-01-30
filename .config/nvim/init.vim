@@ -9,6 +9,8 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'posva/vim-vue'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Configurations
@@ -102,3 +104,7 @@ autocmd FileType scss setl iskeyword+=@-@
 " ervandew/supertab
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" vim-airline/vim-airline
+
+let g:airline#extensions#tabline#enabled = 1

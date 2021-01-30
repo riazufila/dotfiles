@@ -90,6 +90,8 @@ let g:fzf_action = {
     \ 'ctrl-v': 'vsplit'
     \}
 
+let g:fzf_layout = { 'down' : '30%' }
+
 " neoclide/coc.nvim
 
 " Compulsory settings for CoC

@@ -1,5 +1,5 @@
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 export PAGER=less
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink

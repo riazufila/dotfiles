@@ -31,6 +31,24 @@ set incsearch ignorecase hlsearch
 set nocursorline
 set nocursorcolumn
 
+" Open new split panes to right and below
+set splitright splitbelow
+
+" Turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+
+" Start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+
+" Open terminal on CTRL+n
+function! OpenTerminal()
+  split term://zsh
+  resize 10
+  set nonumber norelativenumber
+endfunction
+
+nnoremap <c-n> :call OpenTerminal()<CR>
+
 " Move between panels with Alt in any modes
 tnoremap <A-h> <C-\><C-N><C-w>h
 tnoremap <A-j> <C-\><C-N><C-w>j

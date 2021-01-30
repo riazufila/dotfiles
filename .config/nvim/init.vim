@@ -9,8 +9,8 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'posva/vim-vue'
-Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " Configurations
@@ -30,6 +30,8 @@ set mouse=a
 set incsearch ignorecase hlsearch
 set nocursorline
 set nocursorcolumn
+highlight clear LineNr
+highlight clear SignColumn
 
 " Open new split panes to right and below
 set splitright splitbelow

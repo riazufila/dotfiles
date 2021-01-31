@@ -11,6 +11,8 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plug 'mg979/vim-visual-multi'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Configurations
@@ -22,6 +24,9 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType xml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 set expandtab smarttab
 set autoindent
@@ -30,6 +35,7 @@ set mouse=a
 set incsearch ignorecase hlsearch
 set nocursorline
 set nocursorcolumn
+set encoding=utf-8
 highlight clear LineNr
 highlight clear SignColumn
 
@@ -42,14 +48,16 @@ tnoremap <Esc> <C-\><C-n>
 " Start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 
-" Open terminal on CTRL+n
+" Open terminal on CTRL+x
 function! OpenTerminal()
   split term://zsh
   resize 10
   set nonumber norelativenumber
+  highlight clear LineNr
+  highlight clear SignColumn
 endfunction
 
-nnoremap <c-n> :call OpenTerminal()<CR>
+nnoremap <c-x> :call OpenTerminal()<CR>
 
 " Move between panels with Alt in any modes
 tnoremap <A-h> <C-\><C-N><C-w>h
@@ -85,10 +93,10 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " Find files with CTRL+p
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
-    \ 'ctrl-t': 'tab split',
-    \ 'ctrl-s': 'split',
-    \ 'ctrl-v': 'vsplit'
-    \}
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
 
 let g:fzf_layout = { 'down' : '30%' }
 
@@ -102,23 +110,23 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 if has("patch-8.1.1564")
-    set signcolumn=number
+  set signcolumn=number
 else
-    set signcolumn=yes
+  set signcolumn=yes
 endif
 
 " Install coc extensions
 let g:coc_global_extensions = [
-    \'coc-css',
-    \'coc-html',
-    \'coc-json',
-    \'coc-tsserver',
-    \'coc-prettier',
-    \'coc-pyright',
-    \'coc-clangd',
-    \'coc-snippets',
-    \'coc-vetur'
-    \]
+  \'coc-css',
+  \'coc-html',
+  \'coc-json',
+  \'coc-tsserver',
+  \'coc-prettier',
+  \'coc-pyright',
+  \'coc-clangd',
+  \'coc-snippets',
+  \'coc-vetur'
+  \]
 
 " For scss files
 autocmd FileType scss setl iskeyword+=@-@
@@ -129,5 +137,8 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " vim-airline/vim-airline
 
+let g:airline_left_sep=''
+let g:airline_right=''
+let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline_symbols_ascii = 1

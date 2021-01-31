@@ -58,28 +58,16 @@ Xft.autohint: 0
 Xft.hintstyle: hintslight
 
 ! Font declaration
-URxvt.font: xft:Hack:pixelsize=12:style=Regular
-URxvt.boldFont: xft:Hack:pixelsize=12:style=Bold
-URxvt.italicFont: xft:Hack:pixelsize=12:style=Italic
-URxvt.boldItalicFont: xft:Hack:pixelsize=12:style=Bold Italic
+URxvt.font: xft:Hack:size=10:style=Regular, xft:Noto Sans Mono CJK JP:size=10:style=Regular
+URxvt.boldFont: xft:Hack:size=10:style=Bold, xft:Noto Sans Mono CJK JP:size=10:style=Bold
+URxvt.italicFont: xft:Hack:size=10:style=Italic, xft:Noto Sans Mono CJK JP:size=10:style=Regular
+URxvt.boldItalicFont: xft:Hack:size=10:style=Bold Italic, xft:Noto Sans Mono CJK JP:size=10:style=Regular
+
+! Spaces between letters
+URxvt.letterSpace: 0
 
 ! Enable or disable scroll bar
 URxvt.scrollBar: false
-
-! Place scroll bar at the right
-URxvt.scrollBar_right: true
-
-! Scroll bar style
-URxvt.scrollstyle: plain
-
-! do not scroll with output
-!URxvt*scrollTtyOutput: false
-
-! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-!URxvt*scrollWithBuffer: true
-
-! scroll back to the bottom on keypress
-!URxvt*scrollTtyKeypress: true
 
 ! Disable default terminal contents printing when pressing PrintScreen
 ! Use gnome-screenshot to printscreen by editing i3 dotfile
@@ -89,11 +77,7 @@ URxvt.print-pipe: "cat > /dev/null"
 URxvt.internalBorder: 10
 
 ! Extension
-URxvt.perl-ext-common: resize-font,default,matcher
-
-! Helper to URL clicker
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
+URxvt.perl-ext-common: resize-font
 
 ! Disable default keybinds to enable usage of Ctrl+Shift
 URxvt.iso14755: false

@@ -60,8 +60,8 @@ Xft.hintstyle: hintslight
 ! Font declaration
 URxvt.font: xft:Hack:size=10:style=Regular, xft:Noto Sans Mono CJK JP:size=10:style=Regular
 URxvt.boldFont: xft:Hack:size=10:style=Bold, xft:Noto Sans Mono CJK JP:size=10:style=Bold
-URxvt.italicFont: xft:Hack:size=10:style=Italic, xft:Noto Sans Mono CJK JP:size=10:style=Regular
-URxvt.boldItalicFont: xft:Hack:size=10:style=Bold Italic, xft:Noto Sans Mono CJK JP:size=10:style=Regular
+URxvt.italicFont: xft:Hack:size=10:style=Italic
+URxvt.boldItalicFont: xft:Hack:size=10:style=Bold Italic
 
 ! Spaces between letters
 URxvt.letterSpace: 0

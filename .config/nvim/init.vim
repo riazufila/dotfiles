@@ -5,14 +5,14 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'honza/vim-snippets'
-Plug 'ervandew/supertab'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'mg979/vim-visual-multi'
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " Configurations
@@ -27,6 +27,8 @@ autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType xml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType json setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 set expandtab smarttab
 set autoindent
@@ -36,6 +38,8 @@ set incsearch ignorecase hlsearch
 set nocursorline
 set nocursorcolumn
 set encoding=utf-8
+syntax on
+filetype plugin indent on
 highlight clear LineNr
 highlight clear SignColumn
 
@@ -124,22 +128,54 @@ let g:coc_global_extensions = [
   \'coc-prettier',
   \'coc-pyright',
   \'coc-clangd',
-  \'coc-snippets',
-  \'coc-vetur'
+  \'coc-vetur',
+  \'coc-pairs'
   \]
+
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " For scss files
 autocmd FileType scss setl iskeyword+=@-@
 
-" ervandew/supertab
-
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
 " vim-airline/vim-airline
 
+" Square status and tabs (no arrow-like design)
 let g:airline_left_sep=''
 let g:airline_right=''
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#left_sep = ''
+
+" Enable airline tab
+let g:airline#extensions#tabline#enabled = 1
+
+" Tab format
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" Uses ascii instead of unicode for symbols
 let g:airline_symbols_ascii = 1
+
+" preservim/nerdcommenter
+
+let g:NERDSpaceDelims = 1
+
+" Use `,c` to toggle comment
+vnoremap ,c :call NERDComment(0,"toggle")<CR>
+nnoremap ,c :call NERDComment(0,"toggle")<CR>

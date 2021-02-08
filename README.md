@@ -1,3 +1,3 @@
 # dotfiles
 
-Private usage only.
+Just a simple generic dotfiles.

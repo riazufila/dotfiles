@@ -181,6 +181,8 @@ let g:airline_symbols_ascii = 1
 " preservim/nerdcommenter
 
 let g:NERDSpaceDelims = 1
+let NERDDefaultAlign = "left"
+let g:NERDCustomDelimiters = { 'python': { 'left': '#' }, 'pyrex': { 'left': '#' } }
 
 " Use `,c` to toggle comment
 vnoremap ,c :call NERDComment(0,"toggle")<CR>

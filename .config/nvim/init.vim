@@ -13,6 +13,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Configurations

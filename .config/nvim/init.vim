@@ -43,6 +43,8 @@ syntax on
 filetype plugin indent on
 highlight clear LineNr
 highlight clear SignColumn
+highlight clear StatusLineNC
+highlight clear VertSplit
 
 " Open new split panes to right and below
 set splitright splitbelow

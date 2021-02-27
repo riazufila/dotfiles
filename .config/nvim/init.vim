@@ -190,3 +190,9 @@ let g:NERDCustomDelimiters = { 'python': { 'left': '#' }, 'pyrex': { 'left': '#'
 " Use `,c` to toggle comment
 vnoremap ,c :call NERDComment(0,"toggle")<CR>
 nnoremap ,c :call NERDComment(0,"toggle")<CR>
+
+" airblade/vim-gitgutter
+
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1

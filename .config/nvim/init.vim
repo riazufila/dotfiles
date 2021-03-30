@@ -14,6 +14,7 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
+Plug 'sansyrox/vim-python-virtualenv'
 call plug#end()
 
 " Configurations
@@ -91,6 +92,9 @@ let g:NERDTreeHighlightCursorline = 0
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Open the existing NERDTree on new tabs
+autocmd BufWinEnter * silent NERDTreeMirror
 
 " Toggle NERDTree with CTRL+t
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -196,3 +200,7 @@ nnoremap ,c :call NERDComment(0,"toggle")<CR>
 highlight GitGutterAdd    guifg=#009900 ctermfg=2
 highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+
+" sansyrox/vim-python-virtualenv
+
+let g:python3_host_prog='/usr/bin/python'

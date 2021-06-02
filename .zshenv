@@ -11,5 +11,10 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 typeset -U PATH path
-path=("$HOME/.local/bin" "$path[@]")
+path+=("$HOME/Android/Sdk")
+path+=("$ANDROID_HOME/emulator")
+path+=("$ANDROID_HOME/tools")
+path+=("$ANDROID_HOME/tools/bin")
+path+=("$ANDROID_HOME/platform-tools")
+path=("$HOME/.local/bin" $path)
 export PATH

@@ -59,7 +59,7 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " Open terminal on CTRL+x
 function! OpenTerminal()
   split term://zsh
-  resize 10
+  resize 8
   set nonumber norelativenumber
   highlight clear LineNr
   highlight clear SignColumn
@@ -136,7 +136,9 @@ let g:coc_global_extensions = [
   \'coc-pyright',
   \'coc-clangd',
   \'coc-vetur',
-  \'coc-pairs'
+  \'coc-pairs',
+  \'coc-flow',
+  \'coc-eslint'
   \]
 
 " Use tab for trigger completion with characters ahead and navigate.

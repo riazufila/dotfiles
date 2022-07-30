@@ -1,0 +1,10 @@
+# Ignore everything.
+/*
+
+# Include these files.
+!.gitignore
+!README.md
+
+# Ignore and include certain nvim files.
+!nvim/
+nvim/plugin/

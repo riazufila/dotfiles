@@ -7,5 +7,8 @@ null_ls.setup({
 		null_ls.builtins.formatting.prettierd, -- HTML, JavaScript, etc formatter.
 		null_ls.builtins.diagnostics.eslint_d, -- JavaScript linter.
 		null_ls.builtins.code_actions.eslint_d, -- JavaScript code actions.
+		null_ls.builtins.diagnostics.pylint, -- Python linter.
+		null_ls.builtins.formatting.isort, -- Python import formatter.
+		null_ls.builtins.formatting.black, -- Python formatter.
 	},
 })

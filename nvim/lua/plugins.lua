@@ -23,7 +23,13 @@ packer.startup({
 		use("hrsh7th/cmp-buffer")
 		use("hrsh7th/cmp-path")
 		use("hrsh7th/cmp-cmdline")
-		use("L3MON4D3/LuaSnip")
+		use("rafamadriz/friendly-snippets")
+
+		use({
+			"L3MON4D3/LuaSnip",
+			config = [[require('lua-configs.luasnip')]],
+		})
+
 		use("saadparwaiz1/cmp_luasnip")
 
 		-- Formatter, Code Actions, Diagnostics, etc.

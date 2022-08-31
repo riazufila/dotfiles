@@ -14,6 +14,9 @@ require("fzf-lua").setup({
 		actions = {
 			["ctrl-g"] = false, -- Disable changing grep from Fuzzy to Regex and vice versa.
 		},
+		-- Include files and folders in .gitignore.
+		grep_opts = "--binary-files=without-match --line-number --recursive --color=auto --perl-regexp --no-ignore",
+		rg_opts = "--column --line-number --no-heading --color=always --smart-case --max-columns=512 --no-ignore",
 	},
 	winopts = {
 		hl = {
@@ -25,6 +28,10 @@ require("fzf-lua").setup({
 		git_icons = false,
 		file_icons = false,
 		color_icons = false,
+		-- Include files and folders in .gitignore.
+		find_opts = [[-type f -not -path '*/\.git/*' -printf '%P\n' --no-ignore]],
+		rg_opts = "--color=never --files --hidden --follow -g '!.git' --no-ignore",
+		fd_opts = "--color=never --type f --hidden --follow --exclude .git --no-ignore",
 	},
 })
 

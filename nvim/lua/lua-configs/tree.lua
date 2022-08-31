@@ -32,6 +32,7 @@ require("nvim-tree").setup({
 	},
 	git = {
 		enable = true,
+		ignore = false,
 	},
 	open_on_tab = true,
 	update_focused_file = {

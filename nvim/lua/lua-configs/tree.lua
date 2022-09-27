@@ -8,6 +8,12 @@ require("nvim-tree").setup({
 	view = {
 		adaptive_size = true, -- Adapt size according to content.
 		side = "left",
+		mappings = {
+			list = {
+				{ key = "<C-x>", action = "" }, -- Unset split action.
+				{ key = "<C-s>", action = "split" }, -- Set split action.
+			},
+		},
 	},
 	renderer = {
 		indent_markers = {

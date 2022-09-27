@@ -29,7 +29,7 @@ for _, fileType in ipairs(fileTypes) do
 end
 
 -- Move around splits
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", options)
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", options)
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", options)
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", options)
+vim.api.nvim_set_keymap("n", "<A-h>", "<C-w>h", options)
+vim.api.nvim_set_keymap("n", "<A-j>", "<C-w>j", options)
+vim.api.nvim_set_keymap("n", "<A-k>", "<C-w>k", options)
+vim.api.nvim_set_keymap("n", "<A-l>", "<C-w>l", options)

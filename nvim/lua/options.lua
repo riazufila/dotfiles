@@ -1,6 +1,7 @@
 -- Declare commonly used variables.
 local opt = vim.opt
 local api = vim.api
+local options = { noremap = true, silent = true }
 
 -- Set options.
 opt.tabstop = 4
@@ -26,3 +27,9 @@ local fileTypes = { "lua", "javascript", "javascriptreact", "typescript", "types
 for _, fileType in ipairs(fileTypes) do
 	api.nvim_create_autocmd("FileType", { pattern = fileType, command = "setlocal tabstop=2 shiftwidth=2" })
 end
+
+-- Move around splits
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", options)
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", options)
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", options)
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", options)

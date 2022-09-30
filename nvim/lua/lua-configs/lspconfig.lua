@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
 	end
 
 	-- Whitelist for clients that can format.
-	local allowClientsFormat = { "texlab", "rust_analyzer" }
+	local allowClientsFormat = { "texlab", "rust_analyzer", "dockerls" }
 
 	-- If the current client attached is not in `allowClientsFormat`, then disable formatting.
 	if has_value(allowClientsFormat, client.name) == false then
@@ -133,6 +133,11 @@ require("lspconfig").rust_analyzer.setup({
 })
 
 require("lspconfig").pyright.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig").dockerls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

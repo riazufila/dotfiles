@@ -102,7 +102,6 @@ packer.startup({
 		-- Persistent terminal.
 		use({
 			"akinsho/toggleterm.nvim",
-			tag = "v1.*",
 			config = [[require('lua-configs.toggleterm')]],
 		})
 	end,

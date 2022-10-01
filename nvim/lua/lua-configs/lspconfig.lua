@@ -2,6 +2,7 @@
 local opts = { noremap = true, silent = true }
 local api = vim.api
 local lsp = vim.lsp
+local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").update_capabilities(lsp.protocol.make_client_capabilities())
 
 -- Enable snippet support.
@@ -54,7 +55,7 @@ local on_attach = function(client, bufnr)
 	api.nvim_buf_set_keymap(bufnr, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
-require("lspconfig").sumneko_lua.setup({
+lspconfig.sumneko_lua.setup({
 	settings = {
 		Lua = {
 			runtime = {
@@ -75,30 +76,30 @@ require("lspconfig").sumneko_lua.setup({
 	capabilities = capabilities,
 })
 
-require("lspconfig").tsserver.setup({
+lspconfig.tsserver.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig").html.setup({
+lspconfig.html.setup({
 	cmd = { "vscode-html-languageserver", "--stdio" },
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig").cssls.setup({
+lspconfig.cssls.setup({
 	cmd = { "vscode-css-languageserver", "--stdio" },
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig").jsonls.setup({
+lspconfig.jsonls.setup({
 	cmd = { "vscode-json-languageserver", "--stdio" },
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig").texlab.setup({
+lspconfig.texlab.setup({
 	on_attach = function(client, bufnr)
 		-- Set keymap to build tex documents.
 		api.nvim_set_keymap("n", "<Leader>bl", "<Cmd>TexlabBuild<CR>", opts)
@@ -122,22 +123,22 @@ require("lspconfig").texlab.setup({
 	},
 })
 
-require("lspconfig").ltex.setup({
+lspconfig.ltex.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig").rust_analyzer.setup({
+lspconfig.rust_analyzer.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig").pyright.setup({
+lspconfig.pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig").dockerls.setup({
+lspconfig.dockerls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

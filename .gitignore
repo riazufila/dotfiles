@@ -8,3 +8,4 @@
 # Ignore and include certain nvim files.
 !nvim/
 nvim/plugin/
+!i3

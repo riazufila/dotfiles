@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local api = vim.api
 local lsp = vim.lsp
 local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").update_capabilities(lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities(lsp.protocol.make_client_capabilities())
 
 -- Enable snippet support.
 capabilities.textDocument.completion.completionItem.snippetSupport = true
